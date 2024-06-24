@@ -11,14 +11,15 @@ def is_valid_email(email):
     else:
         return False
 
-# Test the function
-emails = [
-    "test@example.com",
-    "invalid-email.com",
-    "another.test@domain.co",
-    "bad@domain@domain.com",
-    "good.email+label@gmail.com"
-]
+def main():
+    # Prompt the user to enter an email address
+    email = input("Enter an email address: ")
+    
+    # Check if the email is valid
+    if is_valid_email(email):
+        print(f"The email address '{email}' is valid.")
+    else:
+        print(f"The email address '{email}' is invalid.")
 
-for email in emails:
-    print(f"{email}: {is_valid_email(email)}")
+if __name__ == "__main__":
+    main()
